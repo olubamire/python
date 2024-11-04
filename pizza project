@@ -1,0 +1,40 @@
+print("Welcome to Python Pizza Deliveries!")
+size = input("What size pizza do you want? S, M or L: ")
+pepperoni = input("Do you want pepperoni on your pizza? Y or N: ")
+extra_cheese = input("Do you want extra cheese? Y or N: ")
+bill=0
+if size== "s":
+    bill = 15
+    if pepperoni== "y" and extra_cheese=="n":
+        print(f"You ordered a small pizza and pepperoni Costing ${bill +2}. ")
+    if extra_cheese == "y" and pepperoni=="n":
+        print(f"You ordered a small pizza and cheese Costing ${bill+1}.")
+    if pepperoni == "y" and extra_cheese=="y":
+        print(f"You ordered a small pizza,cheese and pepperoni Costing ${bill + 2 +1}. ")
+    if pepperoni == "n" and extra_cheese == "n":
+        print(f"You ordered a small pizza Costing ${bill}. ")
+
+if size== "m":
+    bill=20
+    if pepperoni == "y" and extra_cheese == "n":
+        print(f"You ordered a medium pizza and pepperoni Costing ${bill + 3}. ")
+    if extra_cheese == "y" and pepperoni == "n":
+        print(f"You ordered a medium pizza and cheese Costing ${bill + 1}.")
+    if pepperoni == "y" and extra_cheese == "y":
+        print(f"You ordered a medium pizza,cheese and pepperoni Costing ${bill + 3 + 1}. ")
+    if pepperoni == "n" and extra_cheese == "n":
+        print(f"You ordered a medium pizza Costing ${bill}. ")
+
+if size == "l":
+    bill = 25
+    if pepperoni == "y" and extra_cheese == "n":
+        print(f"You ordered a large pizza and pepperoni Costing ${bill + 3}. ")
+    if extra_cheese == "y" and pepperoni == "n":
+        print(f"You ordered a large pizza and cheese Costing ${bill + 1}.")
+    if pepperoni == "y" and extra_cheese == "y":
+        print(f"You ordered a large pizza,cheese and pepperoni Costing ${bill + 3 + 1}. ")
+    if pepperoni == "n" and extra_cheese == "n":
+        print(f"You ordered a large pizza Costing ${bill}. ")
+
+
+
