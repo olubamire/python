@@ -1,0 +1,86 @@
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+import random
+
+print("Welcome to rock paper scissor Game\n".upper())
+print("""Choose either 0 for rock,1 for paper, or 2 for scissors.
+
+Rock beats scissors, 
+scissors beat paper,
+paper beats rock.
+If we both pick the same,it’s a tie!""")
+
+rock_paper_scissor=[rock,paper,scissors]
+rand_game=random.randint(0,2)
+rock_game=int(input("Enter 0 for rock, 1 for paper, 3 for scissor\n"))
+
+
+
+if rock_game==0:
+        print("You chose rock:")
+        print(rock_paper_scissor[0])
+elif rock_game==1:
+    print("You chose paper:")
+    print(rock_paper_scissor[1])
+elif rock_game==2:
+    print("You chose scissor:")
+    print(rock_paper_scissor[2])
+
+if rand_game==0:
+    print("computer chose rock:")
+    print(rock_paper_scissor[0])
+elif rand_game==1:
+    print("computer chose paper:")
+    print(rock_paper_scissor[1])
+elif rand_game==2:
+    print("computer chose scissor:")
+    print(rock_paper_scissor[2])
+
+if rock_game==0 and rand_game==1:
+    print(f"You chose rock and the computer chose paper: You lose ")
+
+elif rock_game == 0 and rand_game == 2:
+    print(f"You chose rock and the computer chose scissor: You Win ")
+
+elif rock_game == 1 and rand_game == 0:
+    print(f"You chose paper and the computer chose rock: You Win ")
+
+elif rock_game == 1 and rand_game == 2:
+    print(f"You chose paper and the computer chose scissor: You lose ")
+
+elif rock_game == 2 and rand_game == 0:
+    print(f"You chose scissor and the computer chose rock: You lose ")
+
+elif rock_game == 2 and rand_game == 1:
+    print(f"You chose scissor and the computer chose paper: You Win ")
+
+else:
+    print("both chose the same thing: It's a tie")
+
+
+
+
